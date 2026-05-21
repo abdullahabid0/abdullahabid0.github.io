@@ -841,666 +841,79 @@
     <p style="font-size: 16px; line-height: 1.6; color: #444; margin: 0;">A digital storefront must be fully optimized to convert traffic into sales. I design and scale high-performing Shopify and WordPress architectures focused on page speed, UI/UX structure, and technical compliance.</p>
   </div>
 </section>
-  <style>
-  :root {
-    --navy: #0a1929;
-    --navy-mid: #0f2540;
-    --teal: #00c896;
-    --teal-dim: #00a07a;
-    --teal-glow: rgba(0,200,150,0.12);
-    --teal-border: rgba(0,200,150,0.25);
-    --white: #f0f4f8;
-    --muted: rgba(240,244,248,0.5);
-    --card-bg: rgba(255,255,255,0.04);
-    --card-border: rgba(255,255,255,0.08);
-    --input-bg: rgba(255,255,255,0.06);
-    --star-on: #00c896;
-    --star-off: rgba(255,255,255,0.15);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--navy);
-    color: var(--white);
-    min-height: 100vh;
-    padding: 4rem 1.5rem;
-    position: relative;
-    overflow-x: hidden;
-  }
-
-  /* Ambient background dots */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      radial-gradient(circle at 20% 20%, rgba(0,200,150,0.06) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(0,120,200,0.06) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Header */
-  .section-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .section-label::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 1.5px;
-    background: var(--teal);
-  }
-
-  h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
-  }
-
-  h2 em {
-    font-style: normal;
-    color: var(--teal);
-  }
-
-  .subtitle {
-    font-size: 15px;
-    color: var(--muted);
-    font-weight: 300;
-    margin-bottom: 3rem;
-  }
-
-  /* Stats bar */
-  .stats-bar {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--card-border);
-    flex-wrap: wrap;
-  }
-
-  .stat-item { text-align: center; }
-  .stat-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--teal);
-  }
-  .stat-label {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 2px;
-  }
-
-  /* Reviews grid */
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.25rem;
-    margin-bottom: 3rem;
-  }
-
-  .review-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: border-color 0.3s, transform 0.2s;
-    animation: fadeUp 0.5s ease both;
-  }
-
-  .review-card:hover {
-    border-color: var(--teal-border);
-    transform: translateY(-3px);
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .review-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 1rem;
-  }
-
-  .avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    flex-shrink: 0;
-    border: 1.5px solid var(--teal-border);
-  }
-
-  .reviewer-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--white);
-  }
-
-  .reviewer-role {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 1px;
-  }
-
-  .stars {
-    display: flex;
-    gap: 3px;
-    margin-bottom: 0.75rem;
-  }
-
-  .star {
-    font-size: 14px;
-    line-height: 1;
-  }
-
-  .star.on  { color: var(--star-on); }
-  .star.off { color: var(--star-off); }
-
-  .review-text {
-    font-size: 13.5px;
-    line-height: 1.65;
-    color: rgba(240,244,248,0.75);
-    font-weight: 300;
-    font-style: italic;
-  }
-
-  .review-text::before { content: '\201C'; color: var(--teal); font-size: 18px; }
-  .review-text::after  { content: '\201D'; color: var(--teal); font-size: 18px; }
-
-  .review-date {
-    font-size: 11px;
-    color: rgba(240,244,248,0.3);
-    margin-top: 1rem;
-    text-align: right;
-  }
-
-  .service-tag {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 4px;
-    margin-top: 0.75rem;
-    border: 1px solid var(--teal-border);
-    color: var(--teal);
-    background: var(--teal-glow);
-  }
-
-  /* Submit form */
-  .form-section {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 20px;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .form-section::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 200px; height: 200px;
-    background: radial-gradient(circle, rgba(0,200,150,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .form-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-  }
-
-  .form-subtitle {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 2rem;
-  }
-
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  @media (max-width: 580px) {
-    .form-grid { grid-template-columns: 1fr; }
-    .stats-bar { gap: 1.25rem; }
-  }
-
-  .field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .field.full { grid-column: 1 / -1; }
-
-  label {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: rgba(240,244,248,0.55);
-  }
-
-  input, textarea, select {
-    background: var(--input-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 10px;
-    padding: 0.75rem 1rem;
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.25s, background 0.25s;
-    width: 100%;
-  }
-
-  input::placeholder, textarea::placeholder { color: rgba(240,244,248,0.25); }
-
-  input:focus, textarea:focus, select:focus {
-    border-color: var(--teal-dim);
-    background: rgba(0,200,150,0.06);
-  }
-
-  select option { background: var(--navy-mid); color: var(--white); }
-
-  textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
-
-  /* Star rating picker */
-  .star-picker {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    padding: 0.6rem 0;
-  }
-
-  .star-pick {
-    font-size: 22px;
-    cursor: pointer;
-    color: var(--star-off);
-    transition: color 0.15s, transform 0.15s;
-    line-height: 1;
-    user-select: none;
-  }
-
-  .star-pick:hover,
-  .star-pick.active { color: var(--star-on); transform: scale(1.2); }
-
-  .rating-label {
-    font-size: 12px;
-    color: var(--muted);
-    margin-left: 6px;
-  }
-
-  /* Submit button */
-  .submit-btn {
-    margin-top: 1.5rem;
-    width: 100%;
-    padding: 1rem;
-    background: var(--teal);
-    color: var(--navy);
-    font-family: 'Syne', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .submit-btn:hover {
-    background: #00e0aa;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(0,200,150,0.3);
-  }
-
-  .submit-btn:active { transform: scale(0.98); }
-
-  /* Success toast */
-  .toast {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: var(--teal);
-    color: var(--navy);
-    font-family: 'Syne', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0,200,150,0.35);
-    transform: translateY(80px);
-    opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s;
-    z-index: 99;
-    pointer-events: none;
-  }
-
-  .toast.show { transform: translateY(0); opacity: 1; }
-
-  /* Empty state */
-  .empty-state {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 3rem;
-    color: var(--muted);
-  }
-
-  .empty-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    opacity: 0.4;
-  }
-</style>
-</head>
-<body>
-
-<div class="wrapper">
-
-  <!-- Section heading -->
-  <div class="section-label">Client Testimonials</div>
-  <h2>What Clients <em>Say</em></h2>
-  <p class="subtitle">Real feedback from real clients — no fluff, just results.</p>
-
-  <!-- Stats bar -->
-  <div class="stats-bar" id="statsBar">
-    <div class="stat-item">
-      <div class="stat-num" id="totalCount">0</div>
-      <div class="stat-label">Total Reviews</div>
+<section class="reviews-section" style="padding: 80px 20px; font-family: 'Inter', sans-serif; max-width: 1200px; margin: 0 auto; background-color: #ffffff;">
+  
+  <div class="reviews-stats-row" style="display: block; text-align: center; margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 30px;">
+    <div style="display: inline-block; width: 22%; min-width: 120px; vertical-align: top; margin: 10px;">
+      <div style="font-size: 36px; font-weight: 700; color: #111;">3</div>
+      <div style="font-size: 14px; color: #666; margin-top: 5px;">Total Reviews</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-num" id="avgRating">—</div>
-      <div class="stat-label">Average Rating</div>
+    <div style="display: inline-block; width: 22%; min-width: 120px; vertical-align: top; margin: 10px;">
+      <div style="font-size: 36px; font-weight: 700; color: #111;">4.7<span style="color: #00b074; font-size: 28px; margin-left: 2px;">★</span></div>
+      <div style="font-size: 14px; color: #666; margin-top: 5px;">Average Rating</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-num" id="fiveStarCount">0</div>
-      <div class="stat-label">5-Star Reviews</div>
+    <div style="display: inline-block; width: 22%; min-width: 120px; vertical-align: top; margin: 10px;">
+      <div style="font-size: 36px; font-weight: 700; color: #111;">2</div>
+      <div style="font-size: 14px; color: #666; margin-top: 5px;">5-Star Reviews</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-num" id="recCount">0</div>
-      <div class="stat-label">Would Recommend</div>
+    <div style="display: inline-block; width: 22%; min-width: 120px; vertical-align: top; margin: 10px;">
+      <div style="font-size: 36px; font-weight: 700; color: #111;">3</div>
+      <div style="font-size: 14px; color: #666; margin-top: 5px;">Would Recommend</div>
     </div>
   </div>
 
-  <!-- Reviews grid -->
-  <div class="reviews-grid" id="reviewsGrid">
-    <div class="empty-state">
-      <div class="empty-icon">💬</div>
-      <p>Be the first to leave a review!</p>
-    </div>
-  </div>
-
-  <!-- Submit form -->
-  <div class="form-section">
-    <div class="form-title">Leave a Review</div>
-    <p class="form-subtitle">Worked with Abdullah? Share your experience — it only takes a minute.</p>
-
-    <div class="form-grid">
-      <div class="field">
-        <label>Your Name *</label>
-        <input type="text" id="fname" placeholder="e.g. Ahmed Khan" maxlength="50">
-      </div>
-      <div class="field">
-        <label>Your Role / Company</label>
-        <input type="text" id="frole" placeholder="e.g. CEO, MyStore.com" maxlength="60">
-      </div>
-      <div class="field">
-        <label>Service Hired For *</label>
-        <select id="fservice">
-          <option value="" disabled selected>Select a service</option>
-          <option value="SEO Optimization">SEO Optimization</option>
-          <option value="Shopify Development">Shopify Development</option>
-          <option value="WordPress Development">WordPress Development</option>
-          <option value="Digital Marketing">Digital Marketing</option>
-          <option value="TikTok Shop">TikTok Shop</option>
-          <option value="Sales & Outreach">Sales & Outreach</option>
-          <option value="Full Package">Full Package</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Rating *</label>
-        <div class="star-picker" id="starPicker">
-          <span class="star-pick" data-val="1">★</span>
-          <span class="star-pick" data-val="2">★</span>
-          <span class="star-pick" data-val="3">★</span>
-          <span class="star-pick" data-val="4">★</span>
-          <span class="star-pick" data-val="5">★</span>
-          <span class="rating-label" id="ratingLabel">Tap to rate</span>
+  <div class="reviews-grid" style="display: block; text-align: center;">
+    
+    <div class="review-card" style="display: inline-block; width: 30%; min-width: 280px; text-align: left; vertical-align: top; margin: 15px; background: #fafafa; padding: 30px; border-radius: 16px; border: 1px solid #eee; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+      <div style="display: block; margin-bottom: 15px;">
+        <div style="display: inline-block; width: 45px; height: 45px; background: #eaeaea; color: #111; font-weight: 600; text-align: center; line-height: 45px; border-radius: 50px; font-size: 16px; margin-right: 12px;">UA</div>
+        <div style="display: inline-block; vertical-align: middle;">
+          <h4 style="font-size: 16px; font-weight: 600; color: #111; margin: 0;">Usman Ali</h4>
+          <span style="font-size: 12px; color: #666;">E-commerce Entrepreneur</span>
         </div>
       </div>
-      <div class="field full">
-        <label>Your Review *</label>
-        <textarea id="freview" placeholder="Tell others about your experience working with Abdullah — results, communication, quality..." maxlength="400"></textarea>
-        <div style="text-align:right;font-size:11px;color:var(--muted);margin-top:4px;" id="charCount">0 / 400</div>
+      <div style="color: #00b074; font-size: 14px; margin-bottom: 15px;">★★★★☆</div>
+      <p style="font-size: 14px; line-height: 1.6; color: #444; font-style: italic; margin-bottom: 20px;">"Great work on our TikTok Shop setup and affiliate outreach. Got our first 50 orders within 2 weeks of launch. Will definitely hire again."</p>
+      <div style="display: block; overflow: hidden;">
+        <span style="float: left; background: #eef7f4; color: #00b074; font-size: 11px; padding: 5px 10px; border-radius: 6px; font-weight: 600; letter-spacing: 0.5px;">TIKTOK SHOP</span>
+        <span style="float: right; font-size: 12px; color: #999; padding-top: 3px;">Mar 2026</span>
       </div>
     </div>
 
-    <button class="submit-btn" onclick="submitReview()">✦ Submit Your Review</button>
-  </div>
-
-</div>
-
-<div class="toast" id="toast">✓ Review submitted! Thank you.</div>
-
-<script>
-  // Sample seed reviews
-  const seedReviews = [
-    {
-      name: "Tariq Mehmood",
-      role: "Owner, GreenLeaf Store",
-      service: "Shopify Development",
-      rating: 5,
-      text: "Abdullah built my entire Shopify store from scratch. Super professional, delivered on time, and the store looks amazing. Sales doubled in first month!",
-      date: "May 2026",
-      initials: "TM",
-      color: "#1a4a3a"
-    },
-    {
-      name: "Sana Raza",
-      role: "Marketing Manager",
-      service: "SEO Optimization",
-      rating: 5,
-      text: "Our website SEO score went from 42 to 77 in just 3 weeks. Abdullah knows exactly what he's doing. Very responsive and explains everything clearly.",
-      date: "Apr 2026",
-      initials: "SR",
-      color: "#1a2a4a"
-    },
-    {
-      name: "Usman Ali",
-      role: "E-commerce Entrepreneur",
-      service: "TikTok Shop",
-      rating: 4,
-      text: "Great work on our TikTok Shop setup and affiliate outreach. Got our first 50 orders within 2 weeks of launch. Will definitely hire again.",
-      date: "Mar 2026",
-      initials: "UA",
-      color: "#2a1a4a"
-    }
-  ];
-
-  let reviews = JSON.parse(localStorage.getItem('aa_reviews') || 'null') || [...seedReviews];
-  let selectedRating = 0;
-
-  const ratingLabels = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent!'];
-  const avatarColors = ['#1a3a2a','#1a2a3a','#2a1a3a','#3a2a1a','#1a3a3a','#3a1a1a'];
-
-  function saveReviews() {
-    localStorage.setItem('aa_reviews', JSON.stringify(reviews));
-  }
-
-  function renderStars(rating, size='small') {
-    return [1,2,3,4,5].map(i =>
-      `<span class="star ${i <= rating ? 'on' : 'off'}">★</span>`
-    ).join('');
-  }
-
-  function getInitials(name) {
-    return name.trim().split(' ').map(w => w[0]).join('').toUpperCase().slice(0,2);
-  }
-
-  function randomColor(name) {
-    const idx = name.charCodeAt(0) % avatarColors.length;
-    return avatarColors[idx];
-  }
-
-  function renderReviews() {
-    const grid = document.getElementById('reviewsGrid');
-    if (reviews.length === 0) {
-      grid.innerHTML = `<div class="empty-state"><div class="empty-icon">💬</div><p>Be the first to leave a review!</p></div>`;
-      updateStats();
-      return;
-    }
-
-    grid.innerHTML = reviews.slice().reverse().map((r, i) => `
-      <div class="review-card" style="animation-delay:${i * 0.07}s">
-        <div class="review-header">
-          <div class="avatar" style="background:${r.color || randomColor(r.name)}">
-            ${r.initials || getInitials(r.name)}
-          </div>
-          <div>
-            <div class="reviewer-name">${escHtml(r.name)}</div>
-            <div class="reviewer-role">${escHtml(r.role || 'Client')}</div>
-          </div>
+    <div class="review-card" style="display: inline-block; width: 30%; min-width: 280px; text-align: left; vertical-align: top; margin: 15px; background: #fafafa; padding: 30px; border-radius: 16px; border: 1px solid #eee; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+      <div style="display: block; margin-bottom: 15px;">
+        <div style="display: inline-block; width: 45px; height: 45px; background: #eaeaea; color: #111; font-weight: 600; text-align: center; line-height: 45px; border-radius: 50px; font-size: 16px; margin-right: 12px;">SR</div>
+        <div style="display: inline-block; vertical-align: middle;">
+          <h4 style="font-size: 16px; font-weight: 600; color: #111; margin: 0;">Sana Raza</h4>
+          <span style="font-size: 12px; color: #666;">Marketing Manager</span>
         </div>
-        <div class="stars">${renderStars(r.rating)}</div>
-        <div class="review-text">${escHtml(r.text)}</div>
-        <span class="service-tag">${escHtml(r.service)}</span>
-        <div class="review-date">${r.date}</div>
       </div>
-    `).join('');
+      <div style="color: #00b074; font-size: 14px; margin-bottom: 15px;">★★★★★</div>
+      <p style="font-size: 14px; line-height: 1.6; color: #444; font-style: italic; margin-bottom: 20px;">"Our website SEO score went from 42 to 77 in just 3 weeks. Abdullah knows exactly what he's doing. Very responsive and explains everything clearly."</p>
+      <div style="display: block; overflow: hidden;">
+        <span style="float: left; background: #eef7f4; color: #00b074; font-size: 11px; padding: 5px 10px; border-radius: 6px; font-weight: 600; letter-spacing: 0.5px;">SEO OPTIMIZATION</span>
+        <span style="float: right; font-size: 12px; color: #999; padding-top: 3px;">Apr 2026</span>
+      </div>
+    </div>
 
-    updateStats();
-  }
+    <div class="review-card" style="display: inline-block; width: 30%; min-width: 280px; text-align: left; vertical-align: top; margin: 15px; background: #fafafa; padding: 30px; border-radius: 16px; border: 1px solid #eee; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+      <div style="display: block; margin-bottom: 15px;">
+        <div style="display: inline-block; width: 45px; height: 45px; background: #eaeaea; color: #111; font-weight: 600; text-align: center; line-height: 45px; border-radius: 50px; font-size: 16px; margin-right: 12px;">TM</div>
+        <div style="display: inline-block; vertical-align: middle;">
+          <h4 style="font-size: 16px; font-weight: 600; color: #111; margin: 0;">Tariq Mehmood</h4>
+          <span style="font-size: 12px; color: #666;">Owner, GreenLeaf Store</span>
+        </div>
+      </div>
+      <div style="color: #00b074; font-size: 14px; margin-bottom: 15px;">★★★★★</div>
+      <p style="font-size: 14px; line-height: 1.6; color: #444; font-style: italic; margin-bottom: 20px;">"Abdullah built my entire Shopify store from scratch. Super professional, delivered on time, and the store looks amazing. Sales doubled in first month!"</p>
+      <div style="display: block; overflow: hidden;">
+        <span style="float: left; background: #eef7f4; color: #00b074; font-size: 11px; padding: 5px 10px; border-radius: 6px; font-weight: 600; letter-spacing: 0.5px;">SHOPIFY DEVELOPMENT</span>
+        <span style="float: right; font-size: 12px; color: #999; padding-top: 3px;">May 2026</span>
+      </div>
+    </div>
 
-  function updateStats() {
-    const total = reviews.length;
-    const avg   = total ? (reviews.reduce((s,r) => s+r.rating, 0) / total).toFixed(1) : '—';
-    const five  = reviews.filter(r => r.rating === 5).length;
-    const rec   = reviews.filter(r => r.rating >= 4).length;
-    document.getElementById('totalCount').textContent  = total;
-    document.getElementById('avgRating').textContent   = avg + (total ? '★' : '');
-    document.getElementById('fiveStarCount').textContent = five;
-    document.getElementById('recCount').textContent    = rec;
-  }
-
-  function escHtml(str) {
-    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
-  // Star picker
-  const picks = document.querySelectorAll('.star-pick');
-  picks.forEach(s => {
-    s.addEventListener('click', () => {
-      selectedRating = parseInt(s.dataset.val);
-      picks.forEach(p => p.classList.toggle('active', parseInt(p.dataset.val) <= selectedRating));
-      document.getElementById('ratingLabel').textContent = ratingLabels[selectedRating];
-    });
-  });
-
-  // Char counter
-  document.getElementById('freview').addEventListener('input', function() {
-    document.getElementById('charCount').textContent = this.value.length + ' / 400';
-  });
-
-  function submitReview() {
-    const name    = document.getElementById('fname').value.trim();
-    const role    = document.getElementById('frole').value.trim();
-    const service = document.getElementById('fservice').value;
-    const text    = document.getElementById('freview').value.trim();
-
-    if (!name)    { shake('fname');    return; }
-    if (!service) { shake('fservice'); return; }
-    if (!selectedRating) { document.getElementById('ratingLabel').style.color = '#ff6b6b'; setTimeout(()=>document.getElementById('ratingLabel').style.color='', 1000); return; }
-    if (!text)    { shake('freview');  return; }
-
-    const now = new Date();
-    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
-    reviews.push({
-      name, role, service, rating: selectedRating, text,
-      date: months[now.getMonth()] + ' ' + now.getFullYear(),
-      initials: getInitials(name),
-      color: randomColor(name)
-    });
-
-    saveReviews();
-    renderReviews();
-    resetForm();
-    showToast();
-  }
-
-  function shake(id) {
-    const el = document.getElementById(id);
-    el.style.borderColor = '#ff6b6b';
-    el.style.animation = 'shake 0.3s';
-    setTimeout(() => { el.style.borderColor = ''; el.style.animation = ''; }, 600);
-  }
-
-  function resetForm() {
-    document.getElementById('fname').value = '';
-    document.getElementById('frole').value = '';
-    document.getElementById('fservice').value = '';
-    document.getElementById('freview').value = '';
-    document.getElementById('charCount').textContent = '0 / 400';
-    selectedRating = 0;
-    picks.forEach(p => p.classList.remove('active'));
-    document.getElementById('ratingLabel').textContent = 'Tap to rate';
-  }
-
-  function showToast() {
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 3000);
-  }
-
-  // Shake animation
-  const style = document.createElement('style');
-  style.textContent = `@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }`;
-  document.head.appendChild(style);
-
-  // Init
-  renderReviews();
+  </div>
+</section>
 </script>
 <!-- CONTACT -->
 <section id="contact">
