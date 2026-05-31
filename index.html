@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q1M428CKB"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q1M428CKB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -296,7 +297,6 @@
   /* PORTFOLIO PROJECT COMPONENT */
   #portfolio { background: var(--surface2); }
   
-  /* Custom responsive grid to handle Left/Right layout */
   .portfolio-row-container {
     display: flex;
     flex-wrap: wrap;
@@ -519,43 +519,49 @@
   }
   .svc-card p { color: var(--muted); font-size: 0.875rem; }
 
-  /* CONTACT */
+  /* CONTACT (FOOTER DESIGN) */
   #contact { background: var(--text); }
   #contact .section-label { color: #6b8cff; }
   #contact .section-label::before { background: #6b8cff; }
   #contact h2 { color: #fff; }
   .contact-sub { color: rgba(255,255,255,0.5); max-width: 480px; margin-bottom: 2.5rem; font-size: 0.95rem; }
+  
   .contact-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 1rem; max-width: 580px;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem; 
+    max-width: 650px;
   }
   .contact-btn {
-    display: flex; align-items: center; gap: 12px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
+    display: flex; align-items: center; gap: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
     color: #fff;
-    padding: 14px 20px;
-    border-radius: 10px;
+    padding: 16px 22px;
+    border-radius: 12px;
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: background 0.2s, border-color 0.2s;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
   }
-  .contact-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); }
+  .contact-btn:hover { 
+    background: rgba(255,255,255,0.12); 
+    border-color: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+  }
   .cbtn-icon {
-    width: 36px; height: 36px;
+    width: 40px; height: 40px;
     border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     flex-shrink: 0;
   }
-  .cbtn-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); margin-bottom: 1px; }
-  .cbtn-val { font-size: 0.88rem; font-weight: 600; }
+  .cbtn-info { display: flex; flex-direction: column; }
+  .cbtn-label { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .cbtn-val { font-size: 0.92rem; font-weight: 600; font-family: 'Inter', sans-serif; }
 
-  /* FOOTER */
-  footer {
+  /* FOOTER STRIP */
+  .footer-strip {
     background: #080808;
-    padding: 1.5rem 5%;
+    padding: 1.8rem 5%;
     text-align: center;
     color: #555;
     font-size: 0.82rem;
@@ -600,6 +606,7 @@
   <a href="https://wa.me/923024348900" target="_blank" class="nav-cta">Hire Me</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg-text">DIGITAL</div>
   <div class="hero-grid">
@@ -649,14 +656,17 @@
   </div>
 </section>
 
+<!-- PORTFOLIO -->
 <section id="portfolio">
   <div class="section-inner">
     <p class="section-label">My Work</p>
     <h2>Portfolio Projects</h2>
     <p class="section-sub">Real client solutions and performance optimizations — tracked, structured, and measured.</p>
 
+    <!-- TWO COLUMN SIDE BY SIDE GRID -->
     <div class="portfolio-row-container">
       
+      <!-- LEFT CARD: Abu Tarab Herbal -->
       <div class="project-card">
         <div class="project-header">
           <div class="project-browser">
@@ -702,6 +712,7 @@
         </div>
       </div>
 
+      <!-- RIGHT CARD: Nature's Calm Spa -->
       <div class="project-card">
         <div class="project-header" style="background: linear-gradient(135deg, #0d385c 0%, #2b5a9e 100%);">
           <div class="project-browser" style="background: rgba(255,255,255,0.09);">
@@ -712,7 +723,8 @@
             </div>
             <div class="browser-url">naturescalmspa.com</div>
           </div>
-          <button style="background: #fff; color: #2b5a9e; font-size: 0.8rem; font-weight: 600; padding: 7px 16px; border-radius: 6px; border: none; cursor: pointer; white-space: nowrap;">Optimized View</button>
+          <!-- Clickable Live Link Added Here As Requested -->
+          <a href="https://naturescalmspa.com" target="_blank" class="project-live-btn" style="background: #fff; color: #2b5a9e;">View Live →</a>
         </div>
         <div class="project-body">
           <div>
@@ -751,6 +763,7 @@
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" style="background: var(--surface2);">
   <div class="section-inner">
     <p class="section-label">What I Know</p>
@@ -809,6 +822,7 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
     <p class="section-label">My Journey</p>
@@ -855,6 +869,7 @@
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services" style="background: var(--surface2);">
   <div class="section-inner">
     <p class="section-label">What I Offer</p>
@@ -894,6 +909,7 @@
     </div>
   </div>
 </section>
+
 <section class="services-main-section" style="padding: 80px 20px; font-family: 'Inter', sans-serif; max-width: 1200px; margin: 0 auto; background-color: #ffffff;">
   <h2 style="font-size: 32px; margin-bottom: 35px; font-weight: 700; color: #111; letter-spacing: -0.5px;">Professional Services & Expertise</h2>
 
@@ -913,9 +929,57 @@
   </div>
 </section>
 
-<footer>
+<!-- CONTACT SECTION / FOOTER AS SHOWN IN IMAGE_7C521E.PNG -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label">Get In Touch</p>
+    <h2>Let's Work Together</h2>
+    <p class="contact-sub">Have a project in mind? Looking for an SEO specialist or web developer? Reach out — I reply fast.</p>
+    
+    <div class="contact-grid">
+      <!-- WhatsApp Link -->
+      <a href="https://wa.me/923024348900" target="_blank" class="contact-btn">
+        <div class="cbtn-icon" style="background: #25d366;">💬</div>
+        <div class="cbtn-info">
+          <span class="cbtn-label">WhatsApp</span>
+          <span class="cbtn-val">0302 4348900</span>
+        </div>
+      </a>
+
+      <!-- Email Link -->
+      <a href="mailto:mrabdullah4334@gmail.com" class="contact-btn">
+        <div class="cbtn-icon" style="background: #ea4335;">✉️</div>
+        <div class="cbtn-info">
+          <span class="cbtn-label">Email</span>
+          <span class="cbtn-val">mrabdullah4334@gmail.com</span>
+        </div>
+      </a>
+
+      <!-- LinkedIn Link (Personal Profile Connected) -->
+      <a href="https://linkedin.com/in/abdullahabid0" target="_blank" class="contact-btn">
+        <div class="cbtn-icon" style="background: #0a66c2;">🔗</div>
+        <div class="cbtn-info">
+          <span class="cbtn-label">LinkedIn</span>
+          <span class="cbtn-val">Abdullah Abid</span>
+        </div>
+      </a>
+
+      <!-- Direct Project Brief -->
+      <a href="mailto:mrabdullah4334@gmail.com?subject=Project%20Brief" class="contact-btn">
+        <div class="cbtn-icon" style="background: #1a3cff;">🎯</div>
+        <div class="cbtn-info">
+          <span class="cbtn-label">Send a Project Brief</span>
+          <span class="cbtn-val">Email Me Directly</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM STRIP AS SHOWN IN IMAGE_7C529A.PNG -->
+<div class="footer-strip">
   <p>© 2026 Abdullah Abid. Built with Custom Code.</p>
-</footer>
+</div>
 
 </body>
 </html>
