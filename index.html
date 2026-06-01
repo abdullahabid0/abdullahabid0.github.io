@@ -949,57 +949,80 @@ Dedicated outreach and cold calling support for high-ticket service industries, 
 
 <!-- CONTACT SECTION / FOOTER -->
 <section id="contact">
-  <div class="section-inner">
-    <p class="section-label">Get In Touch</p>
-    <h2>Let's Work Together</h2>
-    <p class="contact-sub">Have a project in mind? Looking for an SEO specialist or web developer? Reach out — I reply fast.</p>
-    
-    <div class="contact-grid">
-      <!-- WhatsApp Link -->
-<a href="https://wa.me/923024348900?text=Hi%20Abdullah,%20I%20visited%20your%20portfolio%20and%20want%20to%20discuss%20a%20project%20regarding%20SEO%20/%20Web%20Development." target="_blank" class="btn-primary">WhatsApp Me</a>
-      <div class="cbtn-icon" style="background: #25d366;">💬</div>
-        <div class="cbtn-info">
-          <span class="cbtn-label">WhatsApp</span>
-          <span class="cbtn-val">0302 4348900</span>
-        </div>
-      </a>
+    <div class="section-inner">
+      <p class="section-label">Get In Touch</p>
+      <h2>Let's Work Together</h2>
+      <p class="contact-sub">Have a project in mind? Looking for an SEO specialist or web developer? Reach out — I reply fast.</p>
 
-      <!-- Email Link -->
-      <a href="mailto:mrabdullah4334@gmail.com" class="contact-btn">
-        <div class="cbtn-icon" style="background: #ea4335;">✉️</div>
-        <div class="cbtn-info">
-          <span class="cbtn-label">Email</span>
-          <span class="cbtn-val">mrabdullah4334@gmail.com</span>
-        </div>
-      </a>
+      <div class="contact-grid">
+        <!-- WhatsApp Link Fixed Layout -->
+        <a href="https://wa.me/923024348900?text=Hi%20Abdullah,%20I%20visited%20your%20portfolio%20and%20want%20to%20discuss%20a%20project%20regarding%20SEO%20/%20Web%20Development." target="_blank" class="contact-btn">
+          <div class="cbtn-icon" style="background: #25d366;">💬</div>
+          <div class="cbtn-info">
+            <span class="cbtn-label">WhatsApp</span>
+            <span class="cbtn-val">0302 4348900</span>
+          </div>
+        </a>
 
-    <!-- LinkedIn Link -->
-      <a href="https://www.linkedin.com/in/abdullah-abid-seo/" target="_blank" class="contact-btn">
-        <div class="cbtn-icon" style="background: #0a66c2;">🔗</div>
-        <div class="cbtn-info">
-          <span class="cbtn-label">LinkedIn</span>
-          <span class="cbtn-val">Abdullah Abid</span>
-        </div>
-      </a>
+        <!-- Email -->
+        <a href="mailto:mrabdullah4334@gmail.com" class="contact-btn">
+          <div class="cbtn-icon" style="background: #ea4335;">✉️</div>
+          <div class="cbtn-info">
+            <span class="cbtn-label">EMAIL</span>
+            <span class="cbtn-val">mrabdullah4334@gmail.com</span>
+          </div>
+        </a>
 
-      <!-- Direct Project Brief -->
-      <a href="mailto:mrabdullah4334@gmail.com?subject=Project%20Brief" class="contact-btn">
-        <div class="cbtn-icon" style="background: #1a3cff;">🎯</div>
-        <div class="cbtn-info">
-          <span class="cbtn-label">Send a Project Brief</span>
-          <span class="cbtn-val">Email Me Directly</span>
-        </div>
-      </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/abdullah-abid" target="_blank" class="contact-btn">
+          <div class="cbtn-icon" style="background: #0a66c2;">🔗</div>
+          <div class="cbtn-info">
+            <span class="cbtn-label">LINKEDIN</span>
+            <span class="cbtn-val">Abdullah Abid</span>
+          </div>
+        </a>
+
+        <!-- Direct Project Brief -->
+        <a href="mailto:mrabdullah4334@gmail.com?subject=Project%20Brief" class="contact-btn">
+          <div class="cbtn-icon" style="background: #1a3cff;">🎯</div>
+          <div class="cbtn-info">
+            <span class="cbtn-label">SEND A PROJECT BRIEF</span>
+            <span class="cbtn-val">Email Me Directly</span>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer-strip">
+  <footer class="footer-strip">
     <p>© 2026 Abdullah Abid.</p>
   </footer>
-<!-- Robust Back to Top Button and Script Combined -->
-<button id="backToTop" title="Go to top" style="position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 99999 !important; display: none; background-color: #4caf50 !important; color: white !important; border: none !important; outline: none !important; width: 50px !important; height: 50px !important; border-radius: 50% !important; cursor: pointer !important; font-size: 22px !important; box-shadow: 0px 4px 15px rgba(0,0,0,0.4) !important; transition: all 0.3s ease !important; font-weight: bold !important; align-items: center; justify-content: center;">↑</button>
 
+  <!-- Fixed Back to Top Button Structure -->
+  <button id="backToTop" title="Go to top" style="position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 99999 !important; display: none; background-color: #4caf50 !important; color: white !important; border: none !important; outline: none !important; width: 50px !important; height: 50px !important; border-radius: 50% !important; cursor: pointer !important; font-size: 22px !important; box-shadow: 0px 4px 15px rgba(0,0,0,0.4) !important; transition: all 0.3s ease !important; font-weight: bold !important; align-items: center; justify-content: center;">↑</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const btn = document.getElementById("backToTop");
+      
+      window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 400 || document.documentElement.scrollTop > 400) {
+          btn.style.display = "flex";
+        } else {
+          btn.style.display = "none";
+        }
+      });
+
+      btn.addEventListener("click", function() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+</body>
+</html>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const btn = document.getElementById("backToTop");
