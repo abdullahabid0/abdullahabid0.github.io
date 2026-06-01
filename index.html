@@ -997,6 +997,28 @@ Dedicated outreach and cold calling support for high-ticket service industries, 
 <footer class="footer-strip">
     <p>© 2026 Abdullah Abid.</p>
   </footer>
+<!-- Robust Back to Top Button and Script Combined -->
+<button id="backToTop" title="Go to top" style="position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 99999 !important; display: none; background-color: #4caf50 !important; color: white !important; border: none !important; outline: none !important; width: 50px !important; height: 50px !important; border-radius: 50% !important; cursor: pointer !important; font-size: 22px !important; box-shadow: 0px 4px 15px rgba(0,0,0,0.4) !important; transition: all 0.3s ease !important; font-weight: bold !important; align-items: center; justify-content: center;">↑</button>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("backToTop");
+    
+    window.addEventListener("scroll", function() {
+      if (window.pageYOffset > 400 || document.documentElement.scrollTop > 400) {
+        btn.style.display = "flex";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+
+    btn.addEventListener("click", function() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
 </body>
 </html>
