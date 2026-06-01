@@ -934,12 +934,14 @@
     <h2>Let's Start a Project</h2>
     <p class="contact-sub">Available for freelance opportunities, full-time roles, or technical digital audits. Choose your preferred platform to connect instantly.</p>
     
-    <!-- Top Row: Primary WhatsApp Button with Custom Message -->
+    <!-- Top Row: Fixed Solid Primary WhatsApp Button -->
     <div class="whatsapp-row">
-      <a href="https://wa.me/923024348900?text=Hi%20Abdullah,%20I%20visited%20your%20portfolio%20and%20want%20to%20discuss%20a%20project%20regarding%20SEO%20/%20Web%20Development." target="_blank" class="btn-primary">WhatsApp Me</a>
+      <a href="https://wa.me/923024348900?text=Hi%20Abdullah,%20I%20visited%20your%20portfolio%20and%20want%20to%20discuss%20a%20project%20regarding%20SEO%20/%20Web%20Development." target="_blank" class="custom-wa-btn">
+        <span>💬</span> WhatsApp Me
+      </a>
     </div>
 
-    <!-- Bottom Row: Clean 3-Card Grid for Other Channels -->
+    <!-- Bottom Row: Symmetric 3-Card Grid for Other Channels -->
     <div class="contact-grid-three">
       <a href="https://www.linkedin.com/in/abdullah-abid-seo/" target="_blank" class="contact-btn">
         <div class="cbtn-icon" style="background: #0077b5;">💼</div>
@@ -967,59 +969,126 @@
 </section>
 
 <style>
-  /* Container layout to properly structure the sections */
+  /* Base section corrections */
+  #contact {
+    padding: 60px 0;
+    width: 100%;
+  }
+  #contact .section-inner {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  #contact .contact-sub {
+    color: #a0aec0;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* WhatsApp Row & Custom Solid Button Styling */
   #contact .whatsapp-row {
     display: flex;
     justify-content: flex-start;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     width: 100%;
-    max-width: 750px;
   }
-  
-  /* Retaining your exact btn-primary class requirements */
-  #contact .btn-primary {
-    display: inline-flex !important;
+  #contact .custom-wa-btn {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    background: #25d366 !important;
+    color: #ffffff !important;
+    padding: 14px 28px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
     text-decoration: none !important;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  #contact .custom-wa-btn:hover {
+    background: #20ba56 !important;
+    transform: translateY(-2px);
   }
 
-  /* Fixed 3-column structural layout for the remaining links */
+  /* 3-Column Standardized Grid */
   #contact .contact-grid-three {
     display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 1.2rem !important;
-    max-width: 750px !important;
     width: 100%;
   }
-
   #contact .contact-btn {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    background: rgba(255,255,255,0.06) !important;
-    border: 1px solid rgba(255,255,255,0.1) !important;
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
     padding: 16px 20px !important;
     border-radius: 12px !important;
     text-decoration: none !important;
     width: 100% !important;
     height: auto !important;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  #contact .contact-btn:hover {
+    background: rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.15) !important;
+  }
+  #contact .cbtn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 14px;
+    flex-shrink: 0;
+  }
+  #contact .cbtn-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #contact .cbtn-label {
+    font-size: 0.75rem;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+  #contact .cbtn-val {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
-  /* Ensuring perfect responsive design for smaller windows and mobile devices */
-  @media (max-width: 768px) {
+  /* Perfect Responsive Overrides for Mobile/Tablets */
+  @media (max-width: 850px) {
+    #contact .contact-grid-three {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 600px) {
     #contact .contact-grid-three {
       grid-template-columns: 1fr !important;
     }
     #contact .whatsapp-row {
       justify-content: center;
     }
+    #contact .custom-wa-btn {
+      width: 100%;
+      justify-content: center;
+    }
   }
 </style>
-<footer class="footer-strip">
+    <footer class="footer-strip">
   <p>&copy; 2026 Abdullah Abid. All Rights Reserved.</p>
 </footer>
 
