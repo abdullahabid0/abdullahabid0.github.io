@@ -44,7 +44,7 @@
     "addressLocality": "Lahore",
     "addressRegion": "Punjab",
     "addressCountry": "Pakistan"
-  },
+  ],
   "knowsAbout": [
     "Search Engine Optimization",
     "Technical SEO",
@@ -323,14 +323,14 @@
 
   /* PORTFOLIO PROJECT COMPONENT */
   #portfolio { background: var(--surface2); }
-   
+  
   .portfolio-row-container {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
     width: 100%;
   }
-   
+  
   .project-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -546,18 +546,26 @@
   }
   .svc-card p { color: var(--muted); font-size: 0.875rem; }
 
-  /* CONTACT (FOOTER DESIGN) */
-  #contact { background: var(--text); }
+  /* CONTACT (FOOTER DESIGN) FULL WIDTH & GRID FIX */
+  #contact { 
+    background: var(--text); 
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    box-sizing: border-box;
+  }
   #contact .section-label { color: #6b8cff; }
   #contact .section-label::before { background: #6b8cff; }
   #contact h2 { color: #fff; }
   .contact-sub { color: rgba(255,255,255,0.5); max-width: 480px; margin-bottom: 2.5rem; font-size: 0.95rem; }
-   
+    
   .contact-grid {
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr);
+    display: grid !important; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
     gap: 1.2rem; 
-    max-width: 650px;
+    max-width: 1200px !important;
+    width: 100%;
   }
   .contact-btn {
     display: flex; align-items: center; gap: 14px;
@@ -882,81 +890,44 @@
         <div class="tl-body">
           <h3>Digital Marketing &amp; SEO — Certification</h3>
           <div class="tl-co">STEP Institute of Art, Design &amp; Management — Navttac Certified</div>
-          <p>Completed government-certified training at STEP Institute covering SEO, Google Ads, and e-commerce growth strategies.</p>
+          <p>Completed government-certified training at STEP Institute covering SEO, Google Ads, and full strategic implementation.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section id="contact">
   <div class="section-inner">
-    <p class="section-label">Services</p>
-    <!-- SERVICES -->
-<section id="services">
-  <div class="section-inner">
-    <p class="section-label">Services</p>
-    <h2>What I Offer</h2>
-    <p class="section-sub">Professional strategies and technical executions designed to scale your brand's digital presence.</p>
-    <div class="services-grid">
-      <div class="svc-card">
-        <div class="svc-num">01</div>
-        <h3>Search Engine Optimization</h3>
-        <p>Complete execution of on-page structures, deep target keyword research, technical metadata updates, and comprehensive audit implementations to build sustainable search visibility.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">02</div>
-        <h3>Digital Marketing</h3>
-        <p>Data-driven marketing strategies, social media campaign optimization, brand growth planning, and performance tracking to scale online visibility and sales.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">03</div>
-        <h3>Shopify Development</h3>
-        <p>Custom setup of end-to-end e-commerce storefronts, architecture building, secure layouts, conversion rate adjustments, and manual custom theme additions.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">04</div>
-        <h3>Merchant Center Tuning</h3>
-        <p>Complete configuration of Google Merchant profiles, resolution of technical structure conflicts, and clean fix execution for duplicate titles or product metadata errors.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-num">05</div>
-        <h3>WordPress Customization</h3>
-        <p>Clean design implementation for professional business platforms and WooCommerce systems utilizing structural builders and manual feature settings without performance drag.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- CONTACT (FOOTER DESIGN) -->
-<section id="contact" style="background: #0b0b0c !important; width: 100% !important; margin: 0 !important; padding: 60px 0 !important; box-sizing: border-box !important;">
-  <div class="section-inner" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
     <p class="section-label">Get In Touch</p>
     <h2>Let's Start a Project</h2>
     <p class="contact-sub">Available for freelance opportunities, full-time roles, or technical digital audits. Choose your preferred platform to connect instantly.</p>
     
-    <!-- Top Row: Fixed Solid Primary WhatsApp Button -->
-    <div class="whatsapp-row">
-      <a href="https://wa.me/923024348900?text=Hi%20Abdullah,%20I%20visited%20your%20portfolio%20and%20want%20to%20discuss%20a%20project%20regarding%20SEO%20/%20Web%20Development." target="_blank" class="custom-wa-btn">
-        <span>💬</span> WhatsApp Me
+    <div class="contact-grid">
+      <a href="https://wa.me/923024348900" target="_blank" class="contact-btn">
+        <div class="cbtn-icon" style="background: #25D366;">💬</div>
+        <div class="cbtn-info">
+          <span class="cbtn-label">WhatsApp Me</span>
+          <span class="cbtn-val">Connect Instantly</span>
+        </div>
       </a>
-    </div>
 
-    <!-- Bottom Row: Symmetric 3-Card Grid for Other Channels -->
-    <div class="contact-grid-three">
       <a href="https://www.linkedin.com/in/abdullah-abid-seo/" target="_blank" class="contact-btn">
-        <div class="cbtn-icon" style="background: #0077b5;">💼</div>
+        <div class="cbtn-icon" style="background: #0077B5;">💼</div>
         <div class="cbtn-info">
           <span class="cbtn-label">LinkedIn Profile</span>
           <span class="cbtn-val">abdullah-abid-seo</span>
         </div>
       </a>
+
       <a href="mailto:mrabdullah4334@gmail.com" class="contact-btn">
-        <div class="cbtn-icon" style="background: #ea4335;">✉️</div>
+        <div class="cbtn-icon" style="background: #EA4335;">✉️</div>
         <div class="cbtn-info">
           <span class="cbtn-label">Email Address</span>
           <span class="cbtn-val">mrabdullah4334@gmail.com</span>
         </div>
       </a>
+
       <a href="https://github.com/abdullahabid0" target="_blank" class="contact-btn">
         <div class="cbtn-icon" style="background: #24292e;">💻</div>
         <div class="cbtn-info">
@@ -964,128 +935,29 @@
           <span class="cbtn-val">@abdullahabid0</span>
         </div>
       </a>
+
+      <a href="https://www.facebook.com/abdullahabid000" target="_blank" class="contact-btn">
+        <div class="cbtn-icon" style="background: #1877F2;">📘</div>
+        <div class="cbtn-info">
+          <span class="cbtn-label">Facebook Page</span>
+          <span class="cbtn-val">abdullahabid000</span>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/abdullahabid0_/" target="_blank" class="contact-btn">
+        <div class="cbtn-icon" style="background: #E1306C;">📸</div>
+        <div class="cbtn-info">
+          <span class="cbtn-label">Instagram Profile</span>
+          <span class="cbtn-val">@abdullahabid0_</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<style>
-  /* Ensuring parent container breaks out of any constraints */
-  body, html {
-    overflow-x: hidden;
-  }
-  
-  #contact .contact-sub {
-    color: #a0aec0;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  /* WhatsApp Row & Custom Solid Button Styling */
-  #contact .whatsapp-row {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 2rem;
-    width: 100%;
-  }
-  #contact .custom-wa-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #25d366 !important;
-    color: #ffffff !important;
-    padding: 14px 28px !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
-    font-size: 1rem !important;
-    text-decoration: none !important;
-    border: none !important;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
-    transition: transform 0.2s ease, background 0.2s ease;
-  }
-  #contact .custom-wa-btn:hover {
-    background: #20ba56 !important;
-    transform: translateY(-2px);
-  }
-
-  /* 3-Column Standardized Grid */
-  #contact .contact-grid-three {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1.2rem !important;
-    width: 100%;
-  }
-  #contact .contact-btn {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    background: rgba(255,255,255,0.04) !important;
-    border: 1px solid rgba(255,255,255,0.08) !important;
-    padding: 16px 20px !important;
-    border-radius: 12px !important;
-    text-decoration: none !important;
-    width: 100% !important;
-    height: auto !important;
-    transition: background 0.2s ease, border-color 0.2s ease;
-  }
-  #contact .contact-btn:hover {
-    background: rgba(255,255,255,0.08) !important;
-    border-color: rgba(255,255,255,0.15) !important;
-  }
-  #contact .cbtn-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    margin-right: 14px;
-    flex-shrink: 0;
-  }
-  #contact .cbtn-info {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  #contact .cbtn-label {
-    font-size: 0.75rem;
-    color: #718096;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
-  }
-  #contact .cbtn-val {
-    font-size: 0.9rem;
-    color: #e2e8f0;
-    font-weight: 500;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  /* Perfect Responsive Overrides for Mobile/Tablets */
-  @media (max-width: 850px) {
-    #contact .contact-grid-three {
-      grid-template-columns: repeat(2, 1fr) !important;
-    }
-  }
-  @media (max-width: 600px) {
-    #contact .contact-grid-three {
-      grid-template-columns: 1fr !important;
-    }
-    #contact .whatsapp-row {
-      justify-content: center;
-    }
-    #contact .custom-wa-btn {
-      width: 100%;
-      justify-content: center;
-    }
-  }
-</style>
-    <footer class="footer-strip">
-  <p>&copy; 2026 Abdullah Abid. All Rights Reserved.</p>
-</footer>
+<div class="footer-strip">
+  &copy; 2026 Abdullah Abid. All Rights Reserved.
+</div>
 
 </body>
 </html>
