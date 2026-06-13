@@ -31,28 +31,55 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Abdullah Abid",
-  "url": "https://abdullahabid0.github.io/",
-  "image": "https://abdullahabid0.github.io/logo.png",
-  "sameAs": [
-    "https://www.linkedin.com/in/abdullah-abid-seo/"
-  ],
-  "jobTitle": "SEO Specialist & Digital Marketing Expert",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Lahore",
-    "addressRegion": "Punjab",
-    "addressCountry": "Pakistan"
-  ],
-  "knowsAbout": [
-    "Search Engine Optimization",
-    "Technical SEO",
-    "On-Page SEO",
-    "Digital Marketing",
-    "Shopify Development",
-    "WordPress Optimization",
-    "Conversion Rate Optimization"
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Abdullah Abid",
+      "url": "https://abdullahabid0.github.io/",
+      "image": "https://abdullahabid0.github.io/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/abdullah-abid-seo/",
+        "https://github.com/abdullahabid0",
+        "https://www.facebook.com/abdullahabid000",
+        "https://www.instagram.com/abdullahabid0_/"
+      ],
+      "jobTitle": "SEO Specialist & Digital Marketing Expert",
+      "email": "mrabdullah4334@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lahore",
+        "addressRegion": "Punjab",
+        "addressCountry": "Pakistan"
+      },
+      "knowsAbout": [
+        "Search Engine Optimization",
+        "Technical SEO",
+        "On-Page SEO",
+        "Digital Marketing",
+        "Shopify Development",
+        "WordPress Optimization",
+        "Conversion Rate Optimization"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "Abdullah Abid - SEO & Digital Marketing Services",
+      "image": "https://abdullahabid0.github.io/logo.png",
+      "url": "https://abdullahabid0.github.io/",
+      "telephone": "+923024348900",
+      "priceRange": "PKR",
+      "areaServed": "Worldwide",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lahore",
+        "addressRegion": "Punjab",
+        "addressCountry": "Pakistan"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Abdullah Abid"
+      }
+    }
   ]
 }
 </script>
@@ -466,6 +493,35 @@
   .svc-card h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text); }
   .svc-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.65; }
 
+  /* FAQ */
+  #faq { background: var(--surface2); }
+  .faq-list { max-width: 760px; display: flex; flex-direction: column; gap: 0.9rem; }
+  .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+  }
+  .faq-item summary {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p { color: var(--muted); font-size: 0.92rem; margin-top: 0.9rem; line-height: 1.7; }
+
   /* CONTACT (SEPARATED SECURE GRID) */
   #contact { 
     background: var(--text); 
@@ -506,6 +562,19 @@
   .cbtn-label { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
   .cbtn-val { font-size: 0.92rem; font-weight: 600; font-family: 'Inter', sans-serif; }
 
+  /* MAP */
+  .map-wrap {
+    margin-top: 2.5rem;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .map-wrap iframe { width: 100%; height: 280px; border: 0; display: block; }
+
   /* FOOTER STRIP */
   .footer-strip { background: #080808; padding: 1.8rem 5%; text-align: center; color: #555; font-size: 0.82rem; border-top: 1px solid #1a1a1a; position: relative; z-index: 10; }
 
@@ -533,7 +602,7 @@
 
 <nav>
   <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-      <img src="logo.png" alt="Abdullah Abid" width="35" height="35" loading="eager" decoding="async" style="border-radius: 50%; object-fit: cover;">
+      <img src="logo.png" alt="Abdullah Abid - SEO Specialist and Digital Marketing Expert Logo" width="35" height="35" loading="eager" decoding="async" style="border-radius: 50%; object-fit: cover;">
       Abdullah<span>.</span>
   </div>
   <ul class="nav-links">
@@ -541,6 +610,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="https://wa.me/923024348900" target="_blank" class="nav-cta">Hire Me</a>
 </nav>
@@ -563,7 +633,7 @@
         <div class="profile-top-bar"></div>
         <div class="avail-pill"><span class="avail-dot"></span> Open to opportunities</div>
         <div class="avatar-circle" style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px;">
-            <img src="logo.png" alt="Abdullah Abid" width="80" height="80" loading="eager" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="logo.png" alt="Abdullah Abid - Digital Marketer, SEO Specialist and Web Developer based in Lahore Pakistan" width="80" height="80" loading="eager" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="card-name">Abdullah Abid</div>
         <div class="card-role">Digital Marketer · SEO · Web Dev</div>
@@ -699,7 +769,7 @@
 
 <section id="skills">
   <div class="section-inner">
-    <p class="section-label">What I Know</p>
+    <p class="section-label">SEO & Digital Marketing Skills</p>
     <h2>Skills &amp; Expertise</h2>
     <p class="section-sub">A well-rounded digital skill set built through certified training and real project experience.</p>
     <div class="skills-grid">
@@ -757,7 +827,7 @@
 
 <section id="experience">
   <div class="section-inner">
-    <p class="section-label">My Journey</p>
+    <p class="section-label">Digital Marketing &amp; SEO Experience</p>
     <h2>Experience</h2>
     <p class="section-sub">Practical experience across digital marketing, eCommerce, and international sales.</p>
     <div class="timeline">
@@ -841,6 +911,86 @@
   </div>
 </section>
 
+<section id="faq">
+  <div class="section-inner">
+    <p class="section-label">Frequently Asked Questions</p>
+    <h2>Common Questions</h2>
+    <p class="section-sub">Quick answers about working with an SEO Specialist & Digital Marketing Expert based in Lahore, Pakistan.</p>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>What SEO services does Abdullah Abid offer?</summary>
+        <p>Complete on-page SEO (meta tags, headings, keyword research, content optimization), technical SEO (site speed, schema markup, Search Console setup), and off-page SEO (backlinks, Google Business Profile, local citations) for businesses and e-commerce stores.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work with Shopify and WordPress stores?</summary>
+        <p>Yes. I build, customize, and optimize both Shopify (theme setup, CRO, speed optimization, apps) and WordPress/WooCommerce (Elementor, plugins, custom pages) websites from scratch to launch.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is your average SEO turnaround time?</summary>
+        <p>A full on-page SEO audit and implementation typically takes 5-7 days, depending on the size of the website. Ongoing SEO and content optimization is usually delivered on a monthly retainer basis.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What are your rates?</summary>
+        <p>Rates are project-based and depend on scope (audit only, full on-page SEO, or ongoing SEO + Digital Marketing). I offer competitive PKR rates for Pakistani businesses and USD rates for international clients. Message me on WhatsApp for a custom quote.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How can I contact you for a project?</summary>
+        <p>The fastest way is WhatsApp — click "Hire Me" or "WhatsApp Me" anywhere on this page. You can also reach out via email, LinkedIn, or check my GitHub for code samples and past work.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What SEO services does Abdullah Abid offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Complete on-page SEO (meta tags, headings, keyword research, content optimization), technical SEO (site speed, schema markup, Search Console setup), and off-page SEO (backlinks, Google Business Profile, local citations) for businesses and e-commerce stores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with Shopify and WordPress stores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. I build, customize, and optimize both Shopify (theme setup, CRO, speed optimization, apps) and WordPress/WooCommerce (Elementor, plugins, custom pages) websites from scratch to launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your average SEO turnaround time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full on-page SEO audit and implementation typically takes 5-7 days, depending on the size of the website. Ongoing SEO and content optimization is usually delivered on a monthly retainer basis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rates are project-based and depend on scope (audit only, full on-page SEO, or ongoing SEO + Digital Marketing). Competitive PKR rates for Pakistani businesses and USD rates for international clients."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact you for a project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The fastest way is WhatsApp. You can also reach out via email, LinkedIn, or check GitHub for code samples and past work."
+      }
+    }
+  ]
+}
+</script>
+
 <section id="contact">
   <div class="section-inner">
     <p class="section-label">Get In Touch</p>
@@ -895,6 +1045,10 @@
           <span class="cbtn-val">@abdullahabid0_</span>
         </div>
       </a>
+    </div>
+
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps?q=Lahore,Punjab,Pakistan&output=embed" title="Abdullah Abid - Lahore Pakistan Location Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
