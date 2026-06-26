@@ -270,6 +270,16 @@ display: flex; align-items: center; justify-content: space-between;
   .section-sub { color: var(--muted); max-width: 480px; margin-bottom: 3.5rem; font-size: 0.95rem; }
 
   /* PORTFOLIO */
+/* PORTFOLIO SECTION UPDATES */
+.portfolio-section {
+    padding-top: 100px;
+}
+
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
   #portfolio { background: var(--surface2); }
   .portfolio-row-container { display: flex; flex-wrap: wrap; gap: 24px; width: 100%; }
  .project-card {
