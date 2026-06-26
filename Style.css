@@ -272,18 +272,15 @@ display: flex; align-items: center; justify-content: space-between;
   /* PORTFOLIO */
   #portfolio { background: var(--surface2); }
   .portfolio-row-container { display: flex; flex-wrap: wrap; gap: 24px; width: 100%; }
-  .project-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    flex: 1;
-    min-width: 320px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+ .project-card {
+    border-radius: 20px; 
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06); 
+}
+.project-card:hover {
+    transform: translateY(-10px); /* Card ka hover par uthna */
+}
   .project-header {
     background: linear-gradient(135deg, #0f1f7a 0%, #1a3cff 100%);
     padding: 2rem 2.5rem;
