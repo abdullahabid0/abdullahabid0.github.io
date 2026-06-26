@@ -15,19 +15,21 @@
 
   html { scroll-behavior: smooth; }
 .header {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
   body {
-    background: var(--bg);
+    padding-top: 80px; 
+    background-color: var(--bg);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+}
 
   /* NAV */
   nav {
