@@ -55,15 +55,18 @@ display: flex; align-items: center; justify-content: space-between;
     margin: 0 auto;
     list-style: none;
 }
-.nav-links a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 0.88rem;
+.nav-links li a {
+    font-size: 15px;
     font-weight: 500;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--text); }
-  .nav-cta {
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease;
+}
+.nav-links li a:hover {
+    color: #0066cc;
+}
+.nav-cta {
     background: var(--text);
     color: #fff;
     font-weight: 500;
