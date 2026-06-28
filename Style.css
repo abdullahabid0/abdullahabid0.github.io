@@ -69,12 +69,11 @@ nav {
     flex: 1; 
 }
 .nav-links li a {
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: #000000 !important;
 }
+
 .nav-links li a:hover {
-    color: #000000;
+    color: #000000 !important;
 }
 .nav-cta {
     margin-left: auto; 
