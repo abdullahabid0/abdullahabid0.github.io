@@ -67,10 +67,11 @@ nav {
     margin: 0; 
     list-style: none;
     flex: 1; 
-    color: #000000 !important;
 }
+.nav-links li a {
+    color: #000000 !important;
 .nav-links li a:hover {
-    color: #000000;
+    color: #000000 !important;
 }
 .nav-cta {
     margin-left: auto; 
