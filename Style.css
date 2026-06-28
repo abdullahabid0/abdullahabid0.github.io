@@ -68,6 +68,9 @@ nav {
     list-style: none;
     flex: 1; 
 }
+nav-links a {
+    color: #000000 !important;
+}
 .nav-links li a:hover {
     color: #000000;
 }
