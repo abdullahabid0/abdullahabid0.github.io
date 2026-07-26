@@ -208,6 +208,58 @@
             font-size: 0.8rem;
             font-weight: 500;
         }
+        /* Flow Tech Collaboration Section */
+        .flowtech-section {
+            padding: 20px 20px 90px 20px;
+        }
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+        .store-chip {
+            background: #ffffff;
+            border: 1px solid #eef2f5;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .store-chip:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .store-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .store-info {
+            min-width: 0;
+        }
+        .store-name {
+            font-weight: 700;
+            font-size: 0.98rem;
+            color: #111;
+        }
+        .store-url {
+            font-size: 0.82rem;
+            color: #0066cc;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     </style>
 </head>
 <body>
@@ -300,6 +352,66 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="flowtech-section">
+        <div class="section-inner">
+            <p class="section-label">Remote Collaboration</p>
+            <h1 class="section-title">Flow Tech – Shopify Store Collaboration</h1>
+            <p class="section-sub">Currently working remotely with Flow Tech, a marketing agency, as a Shopify collaborator gaining hands-on, real-client experience across their store portfolio — handling store maintenance, front-end fixes, and catalog/product management.</p>
+
+            <div class="store-grid">
+                <a href="https://chandni.pk" target="_blank" class="store-chip">
+                    <div class="store-avatar" style="background:#17a2b8;">CHA</div>
+                    <div class="store-info">
+                        <div class="store-name">Chandni.pk</div>
+                        <div class="store-url">chandni.pk</div>
+                    </div>
+                </a>
+                <a href="https://inaraattire.pk" target="_blank" class="store-chip">
+                    <div class="store-avatar" style="background:#2b2b2b;">IN</div>
+                    <div class="store-info">
+                        <div class="store-name">Inara</div>
+                        <div class="store-url">inaraattire.pk</div>
+                    </div>
+                </a>
+                <a href="https://cutisorganic.com" target="_blank" class="store-chip">
+                    <div class="store-avatar" style="background:#8e44ad;">CO</div>
+                    <div class="store-info">
+                        <div class="store-name">Cutis Organics</div>
+                        <div class="store-url">cutisorganic.com</div>
+                    </div>
+                </a>
+                <a href="https://www.theessentiel.store" target="_blank" class="store-chip">
+                    <div class="store-avatar" style="background:#8d6e53;">TE</div>
+                    <div class="store-info">
+                        <div class="store-name">THE ESSENTIEL</div>
+                        <div class="store-url">theessentiel.store</div>
+                    </div>
+                </a>
+                <a href="https://thefarsal.com" target="_blank" class="store-chip">
+                    <div class="store-avatar" style="background:#16a34a;">TF</div>
+                    <div class="store-info">
+                        <div class="store-name">The Farsal</div>
+                        <div class="store-url">thefarsal.com</div>
+                    </div>
+                </a>
+                <a href="https://ayelofficial.com" target="_blank" class="store-chip">
+                    <div class="store-avatar" style="background:#7c3aed;">AO</div>
+                    <div class="store-info">
+                        <div class="store-name">Ayel Official</div>
+                        <div class="store-url">ayelofficial.com</div>
+                    </div>
+                </a>
+                <a href="https://neonwalls.pk" target="_blank" class="store-chip">
+                    <div class="store-avatar" style="background:#0ea5e9;">NW</div>
+                    <div class="store-info">
+                        <div class="store-name">Neon Walls</div>
+                        <div class="store-url">neonwalls.pk</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
